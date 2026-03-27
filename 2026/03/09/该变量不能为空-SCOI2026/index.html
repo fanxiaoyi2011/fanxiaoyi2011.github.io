@@ -177,6 +177,16 @@
   isToc: false,
   pageType: 'post'
 }</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><style>
+/* 强制所有区域使用系统默认字体 */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 代码块保持等宽字体 */
+pre, code, kbd, samp {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Fira Code", monospace !important;
+}
+
 /* 头图全覆盖 */
 .home #page-header {
   height: 100vh !important;
@@ -196,20 +206,6 @@
   font-size: 1.8rem !important;
   color: #fff !important;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
-}
-
-/* 强制所有正文使用系统默认字体（修复楷体和标点问题） */
-#article-container,
-#article-container p,
-#article-container span,
-#article-container div,
-#article-container li,
-.post-content,
-.post-content p,
-.post-content span {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
-  font-style: normal !important;
-  font-weight: normal !important;
 }
 
 /* 可折叠 info 容器样式 */
@@ -253,10 +249,6 @@
 }
 .custom-info-content {
   padding: 16px;
-  font-family: inherit !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
-  color: inherit !important;
 }
 .custom-info .custom-info .custom-info-title {
   background: #7bc5ff;

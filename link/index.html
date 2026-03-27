@@ -160,6 +160,16 @@
   isToc: false,
   pageType: 'page'
 }</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><style>
+/* 强制所有区域使用系统默认字体 */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 代码块保持等宽字体 */
+pre, code, kbd, samp {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Fira Code", monospace !important;
+}
+
 /* 头图全覆盖 */
 .home #page-header {
   height: 100vh !important;
@@ -179,20 +189,6 @@
   font-size: 1.8rem !important;
   color: #fff !important;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
-}
-
-/* 强制所有正文使用系统默认字体（修复楷体和标点问题） */
-#article-container,
-#article-container p,
-#article-container span,
-#article-container div,
-#article-container li,
-.post-content,
-.post-content p,
-.post-content span {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
-  font-style: normal !important;
-  font-weight: normal !important;
 }
 
 /* 可折叠 info 容器样式 */
@@ -236,10 +232,6 @@
 }
 .custom-info-content {
   padding: 16px;
-  font-family: inherit !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
-  color: inherit !important;
 }
 .custom-info .custom-info .custom-info-title {
   background: #7bc5ff;
@@ -280,7 +272,7 @@
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%C2%B7%E6%B8%B8%E8%AE%B0/"><span class="card-category-list-name">生活·游记</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">题解</span><span class="card-category-list-count">43</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/NOI-NOI-CTSC/" style="font-size: 1.15em; color: rgb(50, 59, 180);">NOI/NOI+/CTSC</a><a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.15em; color: rgb(84, 76, 156);">入门</a><a href="/tags/%E6%8F%90%E9%AB%98-%E7%9C%81%E9%80%89/" style="font-size: 1.21em; color: rgb(50, 92, 67);">提高+/省选-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.39em; color: rgb(98, 53, 90);">普及+/提高</a><a href="/tags/%E6%99%AE%E5%8F%8A/" style="font-size: 1.45em; color: rgb(78, 187, 180);">普及-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.33em; color: rgb(181, 50, 154);">普及/提高-</a><a href="/tags/%E6%9A%82%E6%97%A0%E8%AF%84%E5%AE%9A/" style="font-size: 1.27em; color: rgb(71, 50, 50);">暂无评定</a><a href="/tags/%E7%9C%81%E9%80%89-NOI/" style="font-size: 1.15em; color: rgb(195, 50, 119);">省选/NOI-</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/NOI-NOI-CTSC/" style="font-size: 1.15em; color: rgb(50, 85, 50);">NOI/NOI+/CTSC</a><a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.15em; color: rgb(183, 193, 157);">入门</a><a href="/tags/%E6%8F%90%E9%AB%98-%E7%9C%81%E9%80%89/" style="font-size: 1.21em; color: rgb(67, 98, 50);">提高+/省选-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.39em; color: rgb(183, 150, 50);">普及+/提高</a><a href="/tags/%E6%99%AE%E5%8F%8A/" style="font-size: 1.45em; color: rgb(147, 110, 116);">普及-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.33em; color: rgb(151, 195, 50);">普及/提高-</a><a href="/tags/%E6%9A%82%E6%97%A0%E8%AF%84%E5%AE%9A/" style="font-size: 1.27em; color: rgb(176, 165, 138);">暂无评定</a><a href="/tags/%E7%9C%81%E9%80%89-NOI/" style="font-size: 1.15em; color: rgb(50, 156, 50);">省选/NOI-</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>归档</span>
@@ -353,7 +345,7 @@
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">48</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">26.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-03-27T10:37:39.587Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.luogu.com.cn/upload/image_hosting/6cjrnuyo.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By fan_xiaoyi</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"></script><script>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">48</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">26.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-03-27T10:44:33.085Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.luogu.com.cn/upload/image_hosting/6cjrnuyo.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By fan_xiaoyi</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"></script><script>
 // 折叠功能
 function toggleInfo(id) {
   const infoDiv = document.getElementById(id);
