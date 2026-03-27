@@ -198,12 +198,18 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
 }
 
-/* 文章正文保持默认字体 */
-#article-container {
-  font-family: inherit !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
-  color: inherit !important;
+/* 强制所有正文使用系统默认字体（修复楷体和标点问题） */
+#article-container,
+#article-container p,
+#article-container span,
+#article-container div,
+#article-container li,
+.post-content,
+.post-content p,
+.post-content span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
 }
 
 /* 可折叠 info 容器样式 */
