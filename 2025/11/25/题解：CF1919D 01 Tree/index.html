@@ -199,7 +199,7 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
 }
 
-/* 自定义 info 容器样式 */
+/* 可折叠 info 容器样式 */
 .custom-info {
   margin: 16px 0;
   border-left: 4px solid #49b1f5;
@@ -215,6 +215,28 @@
   background: #49b1f5;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-info-title:hover {
+  background: #7bc5ff;
+}
+.collapse-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+.custom-info.collapsed .collapse-icon {
+  transform: rotate(0deg);
+}
+.custom-info:not(.collapsed) .collapse-icon {
+  transform: rotate(90deg);
+}
+.custom-info.collapsed .custom-info-content {
+  display: none;
 }
 .custom-info-content {
   padding: 16px;
@@ -256,6 +278,14 @@
 
   showKatex()
 })()</script></div><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"></script><script>
+// 折叠功能
+function toggleInfo(id) {
+  const infoDiv = document.getElementById(id);
+  if (infoDiv) {
+    infoDiv.classList.toggle('collapsed');
+  }
+}
+
 window.addEventListener('load', function() {
   // KaTeX 渲染
   renderMathInElement(document.body, {
