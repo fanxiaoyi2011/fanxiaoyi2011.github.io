@@ -344,3 +344,31 @@ window.addEventListener('load', function() {
 });
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
+  <script>
+  (function() {
+    // 等待页面完全加载
+    window.addEventListener('load', function() {
+      // 延迟一点，确保 info 框已经展开
+      setTimeout(function() {
+        // 找到所有 info 框的内容区域
+        var infoContents = document.querySelectorAll('.custom-info-content');
+        infoContents.forEach(function(content) {
+          // 如果这个区域还没有被 KaTeX 渲染过
+          if (content && !content.hasAttribute('data-katex-rendered')) {
+            if (typeof renderMathInElement !== 'undefined') {
+              renderMathInElement(content, {
+                delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+              });
+              content.setAttribute('data-katex-rendered', 'true');
+            }
+          }
+        });
+      }, 500);
+    });
+  })();
+  </script>
+  
