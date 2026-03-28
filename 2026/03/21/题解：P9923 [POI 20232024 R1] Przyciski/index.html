@@ -177,17 +177,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"><style>
-/* 强制所有区域使用系统默认字体 */
-* {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
-}
-
-/* 代码块保持等宽字体 */
-pre, code, kbd, samp {
-  font-family: "SF Mono", Monaco, "Cascadia Code", "Fira Code", monospace !important;
-}
-
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><style>
 /* 头图全覆盖 */
 .home #page-header {
   height: 100vh !important;
@@ -207,6 +197,29 @@ pre, code, kbd, samp {
   font-size: 1.8rem !important;
   color: #fff !important;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+/* 强制正文使用系统默认字体（不影响图标） */
+body,
+#article-container,
+#article-container p,
+#article-container div:not(.custom-info):not(.custom-info-content),
+.post-content,
+.post-content p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 确保图标使用自己的字体 */
+.fa, .fas, .far, .fab, .fal, .fad, i[class*="fa-"] {
+  font-family: "Font Awesome 6 Free" !important;
+}
+.fab {
+  font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* 代码块保持等宽字体 */
+pre, code, kbd, samp {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Fira Code", monospace !important;
 }
 
 /* 可折叠 info 容器样式 */
