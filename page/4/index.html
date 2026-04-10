@@ -1,0 +1,521 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>House_of_Fan</title><meta name="author" content="fan_xiaoyi"><meta name="copyright" content="fan_xiaoyi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="House_of_Fan">
+<meta property="og:url" content="https://fanxiaoyi2011.github.io/page/4/index.html">
+<meta property="og:site_name" content="House_of_Fan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/usericon/1495223.png">
+<meta property="article:author" content="fan_xiaoyi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/usericon/1495223.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://fanxiaoyi2011.github.io/page/4/index.html"><link rel="preconnect" href="https://cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/egjs-infinitegrid@4.13.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'House_of_Fan',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"><link rel="stylesheet" href="/css/all.min.css"><style>
+/* 自定义洛谷图标 */
+.fa-luogu:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('/img/lg-favicon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 自定义 Codeforces 图标 */
+.fa-codeforces:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('/img/cf-favicon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 头图全覆盖 */
+.home #page-header {
+  height: 100vh !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 页尾背景图样式 */
+#footer {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 头图文字样式 */
+#site-subtitle {
+  font-size: 1.8rem !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+/* 强制正文使用系统默认字体（不影响图标） */
+body,
+#article-container,
+#article-container p,
+.post-content,
+.post-content p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 确保图标使用自己的字体 */
+.fa, .fas, .far, .fab, .fal, .fad, i[class*="fa-"] {
+  font-family: "Font Awesome 6 Free" !important;
+}
+.fab {
+  font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* 代码块保持等宽字体 */
+pre, code, kbd, samp {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Fira Code", monospace !important;
+}
+
+/* 可折叠 info 容器样式 */
+.custom-info {
+  margin: 16px 0;
+  border-left: 4px solid #49b1f5;
+  background: #e6f7ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.custom-info .custom-info {
+  margin: 8px 16px;
+}
+.custom-info-title {
+  padding: 12px 16px;
+  background: #49b1f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-info-title:hover {
+  background: #7bc5ff;
+}
+.collapse-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+.custom-info.collapsed .collapse-icon {
+  transform: rotate(0deg);
+}
+.custom-info:not(.collapsed) .collapse-icon {
+  transform: rotate(90deg);
+}
+.custom-info.collapsed .custom-info-content {
+  display: none;
+}
+.custom-info-content {
+  padding: 16px;
+}
+.custom-info .custom-info .custom-info-title {
+  background: #7bc5ff;
+}
+</style>
+<meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://cdn.luogu.com.cn/upload/usericon/1495223.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(https://cdn.luogu.com.cn/upload/image_hosting/tv18fzg3.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">House_of_Fan</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">House_of_Fan</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://www.luogu.com.cn/user/1495223" target="_blank" title="洛谷"><i class="fa-luogu"></i></a><a class="social-icon" href="https://codeforces.com/profile/fan_xiaoyi" target="_blank" title="Codeforces"><i class="fa-codeforces"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/04/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_abc439_d%20%5BABC439D%5D%20Kadomatsu%20Subsequence/" title="题解：AT_abc439_d [ABC439D] Kadomatsu Subsequence">题解：AT_abc439_d [ABC439D] Kadomatsu Subsequence</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-04T12:27:00.000Z" title="发表于 2026-01-04 20:27:00">2026-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">AT_abc439_d [ABC439D] Kadomatsu Subsequence 思路 我们发现对于每一个 $j$，它同侧可以匹配的 $i,k$ 的顺序和位置并不影响贡献，所以考虑在线处理。 对于每一个数，当它可以被 $3$ 或 $7$ 整除时记录相应的商，因为 $a_i\le 1$，所以它不可能同时作为 $i,k$；当它可以被 $5$ 整除时，统计它前面所有的相应商，在答案中加上对应的 $3,7$ 的商的乘积即可。 从后到前也类似。 代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162#include&lt;bits/stdc++.h&gt;#define fir first#define sec second #define int long long#define pii pair&lt;int,int&gt;#define fep(i,s,e) for(int i=s;i&lt;e;i...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/04/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_abc439_c%20%5BABC439C%5D%202026/" title="题解：AT_abc439_c [ABC439C] 2026">题解：AT_abc439_c [ABC439C] 2026</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-04T12:21:00.000Z" title="发表于 2026-01-04 20:21:00">2026-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">AT_abc439_c [ABC439C] 2026 思路  exactly one pair  注意到是“恰好一对”。 枚举 $x,y$，将所有合法的 $x^2+y^2$ 加入一个数组内。 这样的数最多有 $n$ 个。 考虑对这个数组排序。 在排序后的数组内统计答案，若一个数既不与其前一个相等，也不与其后一个相等，因为数组是有序的，则它对应的 $x,y$ 一定只有一对。 代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354#include&lt;bits/stdc++.h&gt;#define fir first#define sec second #define int long long#define pii pair&lt;int,int&gt;#define fep(i,s,e) for(int i=s;i&lt;e;i++)#define pef(i,s,e) for(int i=s;i&gt;e;i--)#defin...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/01/2026%E5%B9%B4%E6%97%A5%E7%A5%AD/" title="2026年日祭">2026年日祭</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-31T16:00:00.000Z" title="发表于 2026-01-01 00:00:00">2026-01-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a></span></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2182E%20New%20Year's%20Gifts/" title="题解：CF2182E New Year's Gifts">题解：CF2182E New Year's Gifts</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-31T02:15:00.000Z" title="发表于 2025-12-31 10:15:00">2025-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2182E New Year’s Gifts 思路 题目中提到必须给 $i$ 号朋友买价值为 $y_i$ 的礼物，则这部分开销是不可避免的，直接从初始资金中减去。 此时对于朋友 $i$，他的贡献可以被形式化地表达为：  消耗 $\Delta=z_i-y_i$ 的剩余金钱产生 $1$ 的贡献。 消耗一个至少为 $x_i$ 美观度的礼盒产生 $1$ 的贡献。  且这两种操作不可重复计算。 我们可以贪心的将所有 $\Delta$ 按照大小排序，从小到大遍历所有礼盒，对于每个礼盒，找到它可以产生贡献的最大 $\Delta$，再使用这个礼盒，删除掉对应的 $\Delta$。 看到这里，我们需要一个可以支持插入、排序和删除的数据结构。 set 就非常合适。 但注意到这里面可能会出现相同元素，所以使用类似的 multiset。 还有一些细节，见代码中注释。 代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2182B%20New%20Year%20Cake/" title="题解：CF2182B New Year Cake">题解：CF2182B New Year Cake</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-31T01:12:00.000Z" title="发表于 2025-12-31 09:12:00">2025-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2182B New Year Cake 思路 $a,b$ 都小于 $10^6$，而每一层都是上个相同颜色层的 $4$ 倍，最多层数不超过 $20$，所以直接枚举。 但是因为不知道最大的一层应该是什么颜色，所以要枚举形如 $a,b,a,\cdots$ 和 $b,a,b,\cdots$ 的两种构成方法，再取最大值即可。 代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455#include&lt;bits/stdc++.h&gt;#define fir first#define sec second#define int long long#define pii pair&lt;int,int&gt;#define fep(i,s,e) for(int i=s;i&lt;e;i++)#define pef(i,s,e) for(int i=s;i&gt;e;i--)#define rep(i,s,e) for(int i=s;i...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2182C%20Production%20of%20Snowmen/" title="题解：CF2182C Production of Snowmen">题解：CF2182C Production of Snowmen</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-31T01:12:00.000Z" title="发表于 2025-12-31 09:12:00">2025-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2182C Production of Snowmen 思路 首先我们发现 $a$ 与 $b$，$b$ 与 $c$ 的相对顺序之间并不互相影响。 换句话说这道题就等于求 $a$ 与 $b$，$b$ 与 $c$ 之间所有合法匹配方案的乘积。 题目数据范围较小，直接枚举 $a,b$ 和 $b,c$ 的合法匹配即可。 但是由于 $i,j$ 的匹配与 $i+1,j+1$ 的匹配是等价的，所以总方案数还要再乘上 $n$。 代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162#include&lt;bits/stdc++.h&gt;#define fir first#define sec second#define int long long#define pii pair&lt;int,int&gt;#define fep(i,s,e) for(int i=s;i&lt;e;i++)#define pef...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2182D%20Christmas%20Tree%20Decoration/" title="题解：CF2182D Christmas Tree Decoration">题解：CF2182D Christmas Tree Decoration</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-31T01:11:00.000Z" title="发表于 2025-12-31 09:11:00">2025-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2182D Christmas Tree Decoration 思路 手玩样例后发现这个拿装饰品的机制和班上轮换做清洁有点像啊。 不难发现在合法情况下，最少的拿取次数最多比最多的拿取次数少 $1$ 次。 那我们先判断是否合法，方法如下：  找到对应装饰品最多的一个人，设他的对应盒子中有 $mx$ 个装饰品。 将其他人的对应装饰品补足至 $mx-1$，不够的部分从 $p_0$ 中减掉。若在某一步 $p_0$ 不够了，则方案数为 $0$。  然后此时一定存在合法情况，我们考虑如何计算合法排列数。 首先这个排列中每个人的挂装饰品次数应当形如 $mx,\cdots,mx,mx-1,\cdots,mx-1$。 先扫描一遍整个数组，找到 $mx$ 有多少个，设它有 $a$ 个，则 $mx-1$ 有 $n-a$ 个。 此时分类讨论：  若 $p_0\le n-a$，则 $p_0$ 无法将所有 $mx-1$ 补到 $mx$，那么在补足后将会有 $a+p_0$ 个 $mx$，$n-a-p_0$ 个 $mx-1$，则答案为 $C_{n-a}^{p_0}\cdot A_{a+p_0}^{a+p_0...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/10/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2174A%20Needle%20in%20a%20Haystack/" title="题解：CF2174A Needle in a Haystack">题解：CF2174A Needle in a Haystack</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-10T01:47:00.000Z" title="发表于 2025-12-10 09:47:00">2025-12-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2174A Needle in a Haystack 思路 首先我们发现：只要从 $t$ 中去掉子串 $s$ 中的字母，其余字母一定不受约束，按照字典序排列。 所以我们枚举去掉 $s$ 中的字母的其他字母，若其字典序大于此时的 $s$ 的还没用的首位，就加入 $s$ 的首位，否则就加入其余字母的首位。 若在去掉 $s$ 中的字母后有某种字母不足 $0$ 个，则显然无法使得 $t$ 有 $s$ 子串，输出Impossible。 代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879#include&lt;bits/stdc++.h&gt;#define fir first#define sec second #define int long long#define pii pair&lt;int,int&gt;#define fep...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/09/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2175B%20XOR%20Array/" title="题解：CF2175B XOR Array">题解：CF2175B XOR Array</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-09T08:52:00.000Z" title="发表于 2025-12-09 16:52:00">2025-12-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2175B XOR Array 思路 设前缀异或数组为 $pre$，其中 $pre_0=0$，$pre_i= a_1\oplus a_2\oplus\dots\oplus a_i$（$\oplus$ 表示异或）。 根据异或的性质，子数组 $a_x\dots a_y$ 的异或和可以表示为：$f(x,y)=pre_y\oplus pre_{x-1}$。 要求 $f(l,r)=0$，等价于 $pre_r=pre_{l-1}$。 要求其余子数组异或和非 $0$，等价于除 $(x,y)=(l,r)$ 外，任意 $i\neq j$ 都有 $pre_i\neq pre_j$。 初始化 $pre_0=0$，$pre_i=i$（$1\le i\le n$）。此时 $pre$ 数组元素互不相同，保证所有子数组异或和非 $0$。 调整 $pre_r=pre_{l-1}$，满足 $f(l,r)=0$。由于 $l \le r$，$pre_{l-1}$ 的值不会与 $pre_{1}\dots pre_{r-1}$ 重复，因此调整后仅存在一对相等的前缀值 $pre_{r}$ 和 $pre_{l-1}$。 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/09/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2173B%20Niko's%20Tactical%20Cards/" title="题解：CF2173B Niko's Tactical Cards">题解：CF2173B Niko's Tactical Cards</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-09T05:25:00.000Z" title="发表于 2025-12-09 13:25:00">2025-12-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">CF2173B Niko’s Tactical Cards 思路 简单 DP，只需要记录到每一步操作的最小值和最大值，再进行更新就行了。 最大值只会由最大值减 $a_i$ 或 $b_i$ 减最小值得到，最小值只会由最小值减 $a_i$ 或 $b_i$ 减最大值得到。 再分别对这两对值取对应的最值即可。 最后输出最后一位的最大值。 代码 12345678910111213141516171819202122232425262728293031323334353637383940414243#include&lt;bits/stdc++.h&gt;#define fir first#define sec second #define int long long#define pii pair&lt;int,int&gt;#define fep(i,s,e) for(int i=s;i&lt;e;i++)#define pef(i,s,e) for(int i=s;i&gt;e;i--)#define rep(i,s,e) for(int i=s;i&lt;=e;i++)#define...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://cdn.luogu.com.cn/upload/usericon/1495223.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">fan_xiaoyi</div><div class="author-info-description">咕咕嘎嘎！</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://luogu.com.cn/user/1495223"><i class="fa-luogu"></i><span>关注@fan_xiaoyi</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://www.luogu.com.cn/user/1495223" target="_blank" title="洛谷"><i class="fa-luogu"></i></a><a class="social-icon" href="https://codeforces.com/profile/fan_xiaoyi" target="_blank" title="Codeforces"><i class="fa-codeforces"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">博客搭建完工！！！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/02/%E9%A2%98%E8%A7%A3%EF%BC%9AP15567%20%5BCOCI%2020252026%20#5%5D%20%E4%BA%94%E6%AD%A5%20%20Pet/" title="题解：P15567 [COCI 2025/2026">题解：P15567 [COCI 2025/2026</a><time datetime="2026-04-02T03:40:00.000Z" title="发表于 2026-04-02 11:40:00">2026-04-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/02/%E9%A2%98%E8%A7%A3%EF%BC%9ACF266D%20BerDonalds/" title="题解：CF266D BerDonalds">题解：CF266D BerDonalds</a><time datetime="2026-04-01T23:29:00.000Z" title="发表于 2026-04-02 07:29:00">2026-04-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2211C1%20Equal%20Multisets%20(Easy%20Version)/" title="题解：CF2211B Mickey Mouse Constructive">题解：CF2211B Mickey Mouse Constructive</a><time datetime="2026-03-31T15:40:00.000Z" title="发表于 2026-03-31 23:40:00">2026-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2211B%20Mickey%20Mouse%20Constructive/" title="题解：CF2211B Mickey Mouse Constructive">题解：CF2211B Mickey Mouse Constructive</a><time datetime="2026-03-31T15:39:00.000Z" title="发表于 2026-03-31 23:39:00">2026-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/30/%E9%A2%98%E8%A7%A3%EF%BC%9AP9322%20%5BEGOI%202022%5D%20Superpiece%20%20%E8%B6%85%E7%BA%A7%E6%A3%8B%E5%AD%90/" title="题解：P9322 [EGOI 2022] Superpiece / 超级棋子">题解：P9322 [EGOI 2022] Superpiece / 超级棋子</a><time datetime="2026-03-30T10:24:00.000Z" title="发表于 2026-03-30 18:24:00">2026-03-30</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%C2%B7%E6%B8%B8%E8%AE%B0/"><span class="card-category-list-name">生活·游记</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">题解</span><span class="card-category-list-count">48</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/NOI-NOI-CTSC/" style="font-size: 1.15em; color: rgb(50, 143, 84);">NOI/NOI+/CTSC</a><a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.15em; color: rgb(82, 170, 69);">入门</a><a href="/tags/%E6%8F%90%E9%AB%98-%E7%9C%81%E9%80%89/" style="font-size: 1.27em; color: rgb(50, 50, 62);">提高+/省选-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.33em; color: rgb(177, 126, 185);">普及+/提高</a><a href="/tags/%E6%99%AE%E5%8F%8A/" style="font-size: 1.45em; color: rgb(167, 50, 74);">普及-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.39em; color: rgb(94, 115, 50);">普及/提高-</a><a href="/tags/%E6%9A%82%E6%97%A0%E8%AF%84%E5%AE%9A/" style="font-size: 1.21em; color: rgb(179, 158, 50);">暂无评定</a><a href="/tags/%E7%9C%81%E9%80%89-NOI/" style="font-size: 1.15em; color: rgb(163, 89, 104);">省选/NOI-</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">15</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/02/">
+            <span class="card-archive-list-date">
+              二月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">10</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">12</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              十月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              七月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">53</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">32.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-10T08:48:54.834Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.luogu.com.cn/upload/image_hosting/6cjrnuyo.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By fan_xiaoyi</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script></div><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"></script><script>
+// 折叠功能
+function toggleInfo(id) {
+  const infoDiv = document.getElementById(id);
+  if (infoDiv) {
+    infoDiv.classList.toggle('collapsed');
+  }
+}
+
+// 渲染 info 框内的 KaTeX 公式
+function renderKatexInInfo() {
+  if (typeof renderMathInElement !== 'undefined') {
+    document.querySelectorAll('.custom-info-content').forEach(function(element) {
+      if (!element.hasAttribute('data-katex-rendered')) {
+        renderMathInElement(element, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError: false
+        });
+        element.setAttribute('data-katex-rendered', 'true');
+      }
+    });
+  }
+}
+
+// 等待 #subtitle 元素出现再启动打字机
+function initTyped() {
+  var subtitleEl = document.querySelector('#subtitle');
+  if (subtitleEl && typeof Typed !== 'undefined') {
+    new Typed('#subtitle', {
+      strings: [
+        '我常常追忆过去。',
+        '生命瞬间定格在脑海。',
+        '我将背后的时间裁剪、折叠、蜷曲，揉捻成天上朵朵白云。',
+        '云朵之间亦有分别：积云厚重，而卷云飘渺。',
+        '生命里震撼的场景掠过我的思绪便一生无法忘怀，而更为普通平常的记忆在时间的冲刷下只留下些许残骸。',
+        '追忆宛如入梦，太过清楚则无法愉悦自己的幻想，过分模糊却又坠入虚无。',
+        '只有薄雾间的山水，面纱下的女子，那恰到好处的朦胧，才能满足我对美的苛求。',
+        '追忆总在不经意间将我裹进泛黄的纸页里。',
+        '分别又重聚的朋友，推倒又重建的街道，种种线索协助着我从一个具体的时刻出发沿时间的河逆流而上。',
+        '曾经的日子无法重来，我只不过是一个过客。',
+        '但我仍然渴望在每一次追忆之旅中留下闲暇时间，在一个场景前驻足，在岁月的朦胧里瞭望过去的自己，感受尽可能多的甜蜜。',
+        '美好的时光曾流过我的身体，我便心满意足。',
+        '过去已经凝固，我带着回忆向前，只是时常疏于保管，回忆也在改变着各自的形态。这给我的追忆旅程带来些许挑战。',
+        '我该在哪里停留？我问我自己。'
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      startDelay: 300,
+      backDelay: 500,
+      loop: true
+    });
+  } else {
+    setTimeout(initTyped, 200);
+  }
+}
+
+window.addEventListener('load', function() {
+  // KaTeX 全局渲染
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ],
+    throwOnError: false
+  });
+  
+  // 强制显示 KaTeX 公式
+  setTimeout(function() {
+    document.querySelectorAll('.katex').forEach(function(el) {
+      el.style.display = 'inline-block';
+    });
+  }, 500);
+  
+  // 渲染 info 框内的公式
+  renderKatexInInfo();
+  
+  // 启动打字机效果
+  initTyped();
+  
+  // 监听 DOM 变化，当新的 info 框被添加时，重新渲染
+  const observer = new MutationObserver(function() {
+    renderKatexInInfo();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
+  <script>
+  (function() {
+    // 等待页面完全加载
+    window.addEventListener('load', function() {
+      // 延迟一点，确保 info 框已经展开
+      setTimeout(function() {
+        // 找到所有 info 框的内容区域
+        var infoContents = document.querySelectorAll('.custom-info-content');
+        infoContents.forEach(function(content) {
+          // 如果这个区域还没有被 KaTeX 渲染过
+          if (content && !content.hasAttribute('data-katex-rendered')) {
+            if (typeof renderMathInElement !== 'undefined') {
+              renderMathInElement(content, {
+                delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+              });
+              content.setAttribute('data-katex-rendered', 'true');
+            }
+          }
+        });
+      }, 500);
+    });
+  })();
+  </script>
+  

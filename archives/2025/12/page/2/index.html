@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>十二月 2025 | House_of_Fan</title><meta name="author" content="fan_xiaoyi"><meta name="copyright" content="fan_xiaoyi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="十二月 2025">
+<meta property="og:url" content="https://fanxiaoyi2011.github.io/archives/2025/12/page/2/index.html">
+<meta property="og:site_name" content="House_of_Fan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/usericon/1495223.png">
+<meta property="article:author" content="fan_xiaoyi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/usericon/1495223.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://fanxiaoyi2011.github.io/archives/2025/12/page/2/index.html"><link rel="preconnect" href="https://cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/egjs-infinitegrid@4.13.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '十二月 2025',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'archive'
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"><link rel="stylesheet" href="/css/all.min.css"><style>
+/* 自定义洛谷图标 */
+.fa-luogu:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('/img/lg-favicon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 自定义 Codeforces 图标 */
+.fa-codeforces:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('/img/cf-favicon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 头图全覆盖 */
+.home #page-header {
+  height: 100vh !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 页尾背景图样式 */
+#footer {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 头图文字样式 */
+#site-subtitle {
+  font-size: 1.8rem !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+/* 强制正文使用系统默认字体（不影响图标） */
+body,
+#article-container,
+#article-container p,
+.post-content,
+.post-content p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 确保图标使用自己的字体 */
+.fa, .fas, .far, .fab, .fal, .fad, i[class*="fa-"] {
+  font-family: "Font Awesome 6 Free" !important;
+}
+.fab {
+  font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* 代码块保持等宽字体 */
+pre, code, kbd, samp {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Fira Code", monospace !important;
+}
+
+/* 可折叠 info 容器样式 */
+.custom-info {
+  margin: 16px 0;
+  border-left: 4px solid #49b1f5;
+  background: #e6f7ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.custom-info .custom-info {
+  margin: 8px 16px;
+}
+.custom-info-title {
+  padding: 12px 16px;
+  background: #49b1f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-info-title:hover {
+  background: #7bc5ff;
+}
+.collapse-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+.custom-info.collapsed .collapse-icon {
+  transform: rotate(0deg);
+}
+.custom-info:not(.collapsed) .collapse-icon {
+  transform: rotate(90deg);
+}
+.custom-info.collapsed .custom-info-content {
+  display: none;
+}
+.custom-info-content {
+  padding: 16px;
+}
+.custom-info .custom-info .custom-info-title {
+  background: #7bc5ff;
+}
+</style>
+<meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://cdn.luogu.com.cn/upload/usericon/1495223.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page fixed" id="page-header" style="background-image: url(https://cdn.luogu.com.cn/upload/image_hosting/tv18fzg3.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">House_of_Fan</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">十二月 2025</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">全部文章 - 12</div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-12-03T11:21:00.000Z" title="发表于 2025-12-03 19:21:00">2025-12-03</time></div><a class="article-sort-item-title" href="/2025/12/03/%E8%AF%A5%E5%8F%98%E9%87%8F%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA-NOIP2025-2/" title="该变量不能为空">该变量不能为空</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-12-01T03:33:00.000Z" title="发表于 2025-12-01 11:33:00">2025-12-01</time></div><a class="article-sort-item-title" href="/2025/12/01/%E8%AF%A5%E5%8F%98%E9%87%8F%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA-NOIP2025-1/" title="该变量不能为空">该变量不能为空</a></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/archives/2025/12/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/archives/2025/12/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://cdn.luogu.com.cn/upload/usericon/1495223.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">fan_xiaoyi</div><div class="author-info-description">咕咕嘎嘎！</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://luogu.com.cn/user/1495223"><i class="fa-luogu"></i><span>关注@fan_xiaoyi</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://www.luogu.com.cn/user/1495223" target="_blank" title="洛谷"><i class="fa-luogu"></i></a><a class="social-icon" href="https://codeforces.com/profile/fan_xiaoyi" target="_blank" title="Codeforces"><i class="fa-codeforces"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">博客搭建完工！！！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/02/%E9%A2%98%E8%A7%A3%EF%BC%9AP15567%20%5BCOCI%2020252026%20#5%5D%20%E4%BA%94%E6%AD%A5%20%20Pet/" title="题解：P15567 [COCI 2025/2026">题解：P15567 [COCI 2025/2026</a><time datetime="2026-04-02T03:40:00.000Z" title="发表于 2026-04-02 11:40:00">2026-04-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/02/%E9%A2%98%E8%A7%A3%EF%BC%9ACF266D%20BerDonalds/" title="题解：CF266D BerDonalds">题解：CF266D BerDonalds</a><time datetime="2026-04-01T23:29:00.000Z" title="发表于 2026-04-02 07:29:00">2026-04-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2211C1%20Equal%20Multisets%20(Easy%20Version)/" title="题解：CF2211B Mickey Mouse Constructive">题解：CF2211B Mickey Mouse Constructive</a><time datetime="2026-03-31T15:40:00.000Z" title="发表于 2026-03-31 23:40:00">2026-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/31/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2211B%20Mickey%20Mouse%20Constructive/" title="题解：CF2211B Mickey Mouse Constructive">题解：CF2211B Mickey Mouse Constructive</a><time datetime="2026-03-31T15:39:00.000Z" title="发表于 2026-03-31 23:39:00">2026-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/30/%E9%A2%98%E8%A7%A3%EF%BC%9AP9322%20%5BEGOI%202022%5D%20Superpiece%20%20%E8%B6%85%E7%BA%A7%E6%A3%8B%E5%AD%90/" title="题解：P9322 [EGOI 2022] Superpiece / 超级棋子">题解：P9322 [EGOI 2022] Superpiece / 超级棋子</a><time datetime="2026-03-30T10:24:00.000Z" title="发表于 2026-03-30 18:24:00">2026-03-30</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%C2%B7%E6%B8%B8%E8%AE%B0/"><span class="card-category-list-name">生活·游记</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">题解</span><span class="card-category-list-count">48</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/NOI-NOI-CTSC/" style="font-size: 1.15em; color: rgb(50, 143, 84);">NOI/NOI+/CTSC</a><a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.15em; color: rgb(82, 170, 69);">入门</a><a href="/tags/%E6%8F%90%E9%AB%98-%E7%9C%81%E9%80%89/" style="font-size: 1.27em; color: rgb(50, 50, 62);">提高+/省选-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.33em; color: rgb(177, 126, 185);">普及+/提高</a><a href="/tags/%E6%99%AE%E5%8F%8A/" style="font-size: 1.45em; color: rgb(167, 50, 74);">普及-</a><a href="/tags/%E6%99%AE%E5%8F%8A-%E6%8F%90%E9%AB%98/" style="font-size: 1.39em; color: rgb(94, 115, 50);">普及/提高-</a><a href="/tags/%E6%9A%82%E6%97%A0%E8%AF%84%E5%AE%9A/" style="font-size: 1.21em; color: rgb(179, 158, 50);">暂无评定</a><a href="/tags/%E7%9C%81%E9%80%89-NOI/" style="font-size: 1.15em; color: rgb(163, 89, 104);">省选/NOI-</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">15</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/02/">
+            <span class="card-archive-list-date">
+              二月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">10</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">12</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              十月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              七月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">53</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">32.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-10T08:48:54.834Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.luogu.com.cn/upload/image_hosting/6cjrnuyo.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By fan_xiaoyi</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"></script><script>
+// 折叠功能
+function toggleInfo(id) {
+  const infoDiv = document.getElementById(id);
+  if (infoDiv) {
+    infoDiv.classList.toggle('collapsed');
+  }
+}
+
+// 渲染 info 框内的 KaTeX 公式
+function renderKatexInInfo() {
+  if (typeof renderMathInElement !== 'undefined') {
+    document.querySelectorAll('.custom-info-content').forEach(function(element) {
+      if (!element.hasAttribute('data-katex-rendered')) {
+        renderMathInElement(element, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError: false
+        });
+        element.setAttribute('data-katex-rendered', 'true');
+      }
+    });
+  }
+}
+
+// 等待 #subtitle 元素出现再启动打字机
+function initTyped() {
+  var subtitleEl = document.querySelector('#subtitle');
+  if (subtitleEl && typeof Typed !== 'undefined') {
+    new Typed('#subtitle', {
+      strings: [
+        '我常常追忆过去。',
+        '生命瞬间定格在脑海。',
+        '我将背后的时间裁剪、折叠、蜷曲，揉捻成天上朵朵白云。',
+        '云朵之间亦有分别：积云厚重，而卷云飘渺。',
+        '生命里震撼的场景掠过我的思绪便一生无法忘怀，而更为普通平常的记忆在时间的冲刷下只留下些许残骸。',
+        '追忆宛如入梦，太过清楚则无法愉悦自己的幻想，过分模糊却又坠入虚无。',
+        '只有薄雾间的山水，面纱下的女子，那恰到好处的朦胧，才能满足我对美的苛求。',
+        '追忆总在不经意间将我裹进泛黄的纸页里。',
+        '分别又重聚的朋友，推倒又重建的街道，种种线索协助着我从一个具体的时刻出发沿时间的河逆流而上。',
+        '曾经的日子无法重来，我只不过是一个过客。',
+        '但我仍然渴望在每一次追忆之旅中留下闲暇时间，在一个场景前驻足，在岁月的朦胧里瞭望过去的自己，感受尽可能多的甜蜜。',
+        '美好的时光曾流过我的身体，我便心满意足。',
+        '过去已经凝固，我带着回忆向前，只是时常疏于保管，回忆也在改变着各自的形态。这给我的追忆旅程带来些许挑战。',
+        '我该在哪里停留？我问我自己。'
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      startDelay: 300,
+      backDelay: 500,
+      loop: true
+    });
+  } else {
+    setTimeout(initTyped, 200);
+  }
+}
+
+window.addEventListener('load', function() {
+  // KaTeX 全局渲染
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ],
+    throwOnError: false
+  });
+  
+  // 强制显示 KaTeX 公式
+  setTimeout(function() {
+    document.querySelectorAll('.katex').forEach(function(el) {
+      el.style.display = 'inline-block';
+    });
+  }, 500);
+  
+  // 渲染 info 框内的公式
+  renderKatexInInfo();
+  
+  // 启动打字机效果
+  initTyped();
+  
+  // 监听 DOM 变化，当新的 info 框被添加时，重新渲染
+  const observer = new MutationObserver(function() {
+    renderKatexInInfo();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
+  <script>
+  (function() {
+    // 等待页面完全加载
+    window.addEventListener('load', function() {
+      // 延迟一点，确保 info 框已经展开
+      setTimeout(function() {
+        // 找到所有 info 框的内容区域
+        var infoContents = document.querySelectorAll('.custom-info-content');
+        infoContents.forEach(function(content) {
+          // 如果这个区域还没有被 KaTeX 渲染过
+          if (content && !content.hasAttribute('data-katex-rendered')) {
+            if (typeof renderMathInElement !== 'undefined') {
+              renderMathInElement(content, {
+                delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+              });
+              content.setAttribute('data-katex-rendered', 'true');
+            }
+          }
+        });
+      }, 500);
+    });
+  })();
+  </script>
+  
